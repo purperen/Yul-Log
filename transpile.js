@@ -208,13 +208,13 @@ fileNames.forEach(file => {
           let abiBlock = ""
           for (let i = 0; i < abi.length; i++) {
             if (abi[i].indexOf("returns") < -1 && abi[i].substring(0, 5) != "event"){
-              abiBlock += abi[i] + "external view" + ";" + "\n"
+              abiBlock += abi[i] + "external" + ";" + "\n"
             } else {
                 if(abi[i].substring(0, 5) != "event"){
                 //function get() returns (uint256);
                 splitABI = String(abi[i]).split(" ")
                 closeIndex = abi[i].indexOf(")")
-                let funcName = String(abi[i]).substring(0, closeIndex+1) + " external " + String(abi[i]).substring(closeIndex+1, String(abi[i]).length)
+                let funcName = String(abi[i]).substring(0, closeIndex+1) + " external view " + String(abi[i]).substring(closeIndex+1, String(abi[i]).length)
                 abiBlock += funcName +";" + "\n"
               } else {
                 // Handle if its an event
