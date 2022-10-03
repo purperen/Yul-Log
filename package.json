@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ControlCplusControlV/Yul-Log.git"
+    "url": "git+https://github.com/purperen/Yul-Log.git"
   },
   "keywords": [
     "Yul+",
@@ -21,11 +21,12 @@
   "author": "ControlCplusControlV",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/ControlCplusControlV/Yul-Log/issues"
+    "url": "https://github.com/purperen/Yul-Log/issues"
   },
-  "homepage": "https://github.com/ControlCplusControlV/Yul-Log#readme",
+  "homepage": "https://github.com/purperen/Yul-Log#readme",
   "dependencies": {
-    "solc": "^0.8.10",
-    "yulp": "^0.2.3"
+    "dotenv": "^16.0.3",
+    "solc": "^0.8.17",
+    "yulp": "purperen/yulp#0.2.3-verbatim"
   }
 }

@@ -26,14 +26,19 @@ yul-log init
 ```
 
 Now you are all set up and can write `.yulp` files inside of the `Yul+ Contracts` directory.
+or set YULP_CONTRACTS_DIR environment variable to use another directory
 ## Commands
 
 ```
 yul-log
 ```
 
-This will compile .yulp contracts inside of a "Yul+ Contracts" Directory in the current context into a special json file with the following format into a "./build" folder inside the current context
-
+This will compile .yulp contracts inside of a "Yul+ Contracts" Directory in the current context into a hardhat artifact json file
+unless you use 
+```
+yul-log !hardhat
+```
+which will output in the build directory in the following format
 ```
 {
     "_format": "Yul+ Artifact Format v0.0.1",
