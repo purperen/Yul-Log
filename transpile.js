@@ -208,7 +208,7 @@ fileNames.forEach(file => {
           let abiBlock = ""
           for (let i = 0; i < abi.length; i++) {
             if (abi[i].indexOf("returns") < -1 && abi[i].substring(0, 5) != "event"){
-              abiBlock += abi[i] + "external" +";" + "\n"
+              abiBlock += abi[i] + "external view" + ";" + "\n"
             } else {
                 if(abi[i].substring(0, 5) != "event"){
                 //function get() returns (uint256);
