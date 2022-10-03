@@ -256,7 +256,7 @@ fileNames.forEach(file => {
                       "deployedLinkReferences": {} // This either
                   }
                   const data = JSON.stringify(hardhatCompiled);
-                  fs.writeFile("./artifacts/" + "contracts/" + filename[0] + '.json', data, (err) => {
+                  fs.writeFile("./artifacts/" + "contracts/"  + filename[0] + ".yulp/" + filename[0] + '.json', data, (err) => {
                       // In case of a error throw err.
                       if (err) throw err;
                   })
