@@ -1,6 +1,6 @@
 {
   "name": "yul-log",
-  "version": "0.0.2",
+  "version": "0.0.2-verbatim",
   "description": "A Unified Toolchain for Yul+ Smart Contracts ",
   "main": "transpile.js",
   "scripts": {
