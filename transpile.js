@@ -256,7 +256,9 @@ fileNames.forEach(file => {
                       "deployedLinkReferences": {} // This either
                   }
                   const data = JSON.stringify(hardhatCompiled);
-                  fs.writeFile("./artifacts/" + "contracts/"  + filename[0] + ".yulp/" + filename[0] + '.json', data, (err) => {
+                  const hardhat_path = "./artifacts/" + "contracts/"  + filename[0] + ".yulp/";
+                  if (!fs.existsSync(hardhat_path)) fs.mkdirSync(hardhat_path, { recursive: true });
+                  fs.writeFile(hardhat_path + filename[0] + '.json', data, (err) => {
                       // In case of a error throw err.
                       if (err) throw err;
                   })
